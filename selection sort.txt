@@ -1,0 +1,38 @@
+Implementation of Selection sort
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+
+    int a[100],n,min,minIndex;
+    printf("enter no. of elements\n");
+    scanf("%d",&n);
+    printf("enter elements\n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    
+for(int i=0;i<n;i++){
+    min=a[i];
+    minIndex=i;
+    for(int j=i+1;j<n;j++){
+        if(a[j]<min){
+            min=a[j];
+            minIndex=j;
+        }
+    }
+    
+    a[minIndex]=a[i];
+    a[i]=min;
+}    
+ // printing of sorted final array 
+  printf("sotred array:\n");
+for(int i=0;i<n;i++){
+    printf("%d ",a[i]);
+}
+
+}
